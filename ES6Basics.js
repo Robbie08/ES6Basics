@@ -45,6 +45,70 @@ console.log(person.name);
 console.log(person.gender);
 
 
+//--------------- Map function ---------------
+// will go through every element and update it
+// with whatever we want it to be
+const integers = [1,2,3,4];
+
+// this will increment the value inside of each
+// element by 1.
+// NOTE: This function is ES5, usually functions that
+// 		 function in the parameter are ES5
+// 		 
+// const updateIntegers = integers.map(function(number){
+//		return number +=1 
+// });
+
+// -------------- Arrow function ----------------
+// This is called an implisit return. We can remove
+// the curly braces use the fat arrow to return the
+// value.
+// This is helpful when we are returning only one
+// value
+// 
+// if we are passing in one value only, we can 
+// remove the parantheses from (number) to number
+// 
+// in this case number is the value of each
+// element in the integer array
+// this is an ES6 function
+const updateInteger = integer.map((number) => number +=1);
+
+console.log(integers);  // [1,2,3,4]
+console.log(updateIntegers);  // [2,3,4,5]
+
+// another example of arrow function
+
+const ages = [23,4,21,5,19]
+
+// filter an array with ages greater than 20
+// 
+// ES5 function
+// const adults = ages.filter(function(age) {
+//   		return age > 20; // include in current array
+// });
+
+// explisit return arrow function
+const adults = ages.filter((age) => {
+ 		return age > 20;
+}); 
+
+console.log(adults);
+
+
+// ------------------ Template String ---------------
+
+const name = "Robert";
+const age = 24;
+
+// we can use template strings
+// in ES5 we would have to use concatonation to like
+// const sentence = "My name is " +name + ", and I am " +age +" years old."
+// 
+// In ES6 we can use the ${} syntax
+const sentence = "My name is ${name}, and I am ${age} years old "
+
+console.log(sentence);
 
 
 
