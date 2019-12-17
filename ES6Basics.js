@@ -111,5 +111,46 @@ const sentence = "My name is ${name}, and I am ${age} years old "
 console.log(sentence);
 
 
+// ------------ Protoype Methods & Classes--------------
+
+// constructor function to create a new object of person
+// function Person(name, age){
+// 	this.name = name;
+//  	this.age = age;
+// }
+
+// const robert = new Person("Robert",24);
+// console.log(robert); // object Robert
+
+// this is ES5 syntax
+// Person.prototype.speak = function(){
+//  	console.log('Hi, my name is ${this.name}'); 
+// }
+
+// robert.speak(); // call a Method prototype
+
+
+//------------------ ES6 Example --------------
+class Person {
+    constructor(name, age,children){
+         this.name = name;
+        this.age = age;
+          this.children = children; 
+   }
+ speak(){ 
+   console.log('Hi, my name is ${this.name}'); 
+ }
+ 
+ birth(child){
+     this.children.push(child);
+   return this.children;
+ }
+}
+
+const robert = new Person("Robert", 24, ["Shawn","steph"]); 
+
+robert.speak();
+robert.birth("jess");
+console.log(robert.children);
 
 
