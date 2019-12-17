@@ -154,3 +154,28 @@ robert.birth("jess");
 console.log(robert.children);
 
 
+// ---------------- Spread Operator -----------------
+// Always going to see it with anything we can loop
+// through, generally arrays and lists
+
+const name = ["Robert", "Bill", "Sam"]
+const moreNames = ["Will","Paul","Mike"]
+
+// take every element and expands array into elements
+// destructuring the array
+// console.log(...name);  // Robert Bill Sam
+
+// if we want to concatonate the arrays and add Geo
+// in the center like ["Robert", "Bill", "Sam", "Geo","Will","Paul","Mike"]
+
+// this is the ES5 way of doing it
+// let allNames = [];
+// allNames = allNames.concat(name);
+// allNames.push("Gio");
+// allNames = allNames.concat(moreNames);
+
+
+// this is the ES6 way of using spread operator
+const allNames = [...names,"Geo",...moreNames]; 
+
+console.log(allNames);
